@@ -4,14 +4,14 @@
 * Gabriel Costa Kinder - 234720
 
 # Descrição Resumida do Projeto
-Undead Survival é um jogo celular de sobrevivência e estratégia baseado em turnos
+Undead Survival é um jogo celular de sobrevivência e estratégia baseado em turnos.
 
 # Vídeo do Projeto
 [Breve video explicativo do projeto](https://drive.google.com/open?id=14vn7SfmNX47Of_C4Yxt0i782d_3f-4OM)
 
 # Diagrama Geral de Componentes
 
-## Componente Enemy/Player - Table
+## Componente Enemy/Player - Board
 
 Este é o diagrama compondo componentes bases para o jogo:
 
@@ -31,7 +31,7 @@ Este é outro diagrama de um projeto :
 
 # Componente EnemyX
 
-![Componente](diagrama-componente.png)
+![Componente EnemyX](EnemyXComp.png)
 
 ## Interfaces
 
@@ -67,9 +67,9 @@ Método | Objetivo
 -------| --------
 `<id do método em Java>` | `<objetivo do método e descrição dos parâmetros>`
 
-# Componente `<Nome do Componente>`
+# Componente Player
 
-![Componente](diagrama-componente.png)
+![Player](PlayerComp.png)
 
 ## Interfaces
 
@@ -105,9 +105,9 @@ Método | Objetivo
 -------| --------
 `<id do método em Java>` | `<objetivo do método e descrição dos parâmetros>`
 
-# Componente `<Nome do Componente>`
+# Componente Board
 
-![Componente](diagrama-componente.png)
+![Board](BoardComp.png)
 
 ## Interfaces
 

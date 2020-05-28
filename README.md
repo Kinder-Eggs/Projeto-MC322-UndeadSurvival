@@ -35,7 +35,7 @@ Interfaces associadas a esse componente:
 
 Interfaces associadas a esse componente:
 
-![Diagrama Interfaces](diagrama-interfaces.png)
+![Interfaces Player](PlayerInt.png)
 
 # Componente Board
 
@@ -45,7 +45,7 @@ Interfaces associadas a esse componente:
 
 Interfaces associadas a esse componente:
 
-![Diagrama Interfaces](diagrama-interfaces.png)
+![Interfaces Board](BoardInt.png)
 
 # Detalhamento das Interfaces
 
@@ -57,3 +57,25 @@ Método | Objetivo
 getHealth() | Retorna a vida do inimigo.
 decreaseHealth(int) | Decresce a vida do inimigo pelo valor recebido.
 move() | Move o inimigo em direção ao jogador
+
+## Interface IPlayer
+Interface geral para todos os inimigos.
+
+Método | Objetivo
+-------| --------
+getHealth() | Retorna a vida do jogador.
+decreaseHealth(int) | Decresce a vida do jogador pelo valor recebido.
+move(int) | Move o jogador na direção especificada.
+attack(int) | Ataca os inimigos na direção especificada
+
+## Interface IBoard
+Interface geral para todos os inimigos.
+
+Método | Objetivo
+-------| --------
+moveEnemies() | Aciona a função move de todos os inimigos em campo.
+movePlayer(int) | Modifica a posição do jogador.
+spawnEnemies() | Cria mais monstros em campo.
+receiveAttack(int) | Verifica o ataque do jogador e decresce a vida dos inimigos quando necessário.
+printBoard() | Imprime o campo na tela.
+setBoard(int) | Arruma o campo de tamanho int para a posição inicial.

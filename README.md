@@ -11,11 +11,11 @@ Undead Survival é um jogo celular de sobrevivência e estratégia baseado em tu
 
 # Diagrama Geral de Componentes
 
-## Exemplo 1
+## Componente Enemy/Player - Table
 
-Este é o diagrama compondo componentes para :
+Este é o diagrama compondo componentes bases para o jogo:
 
-![]()
+![Diagrama de componentes Enemy/Player](EnemyPlayerComp.png)
 
 ## Exemplo 2
 
@@ -28,6 +28,82 @@ Este é um diagrama inicial do projeto :
 Este é outro diagrama de um projeto :
 
 ![]()
+
+# Componente EnemyX
+
+![Componente](diagrama-componente.png)
+
+## Interfaces
+
+Interfaces associadas a esse componente:
+
+![Diagrama Interfaces](diagrama-interfaces.png)
+
+Campo | Valor
+----- | -----
+Classe | `<caminho completo da classe com pacotes>` <br> Exemplo: `pt.c08componentes.s20catalog.s10ds.DataSetComponent`
+Autores | `<nome dos membros que criaram o componente>`
+Objetivo | `<objetivo do componente>`
+Interface | `<interface em Java do componente>`
+~~~
+public interface ITableProducer {
+  String[] requestAttributes();
+  String[][] requestInstances();
+}
+public interface IDataSource {
+  public String getDataSource();
+  public void setDataSource(String dataSource);
+}
+public interface IDataSet extends ITableProducer, IDataSource {
+}
+~~~
+
+## Detalhamento das Interfaces
+
+### Interface `<nome da interface>`
+`<papel da interface>`.
+
+Método | Objetivo
+-------| --------
+`<id do método em Java>` | `<objetivo do método e descrição dos parâmetros>`
+
+# Componente `<Nome do Componente>`
+
+![Componente](diagrama-componente.png)
+
+## Interfaces
+
+Interfaces associadas a esse componente:
+
+![Diagrama Interfaces](diagrama-interfaces.png)
+
+Campo | Valor
+----- | -----
+Classe | `<caminho completo da classe com pacotes>` <br> Exemplo: `pt.c08componentes.s20catalog.s10ds.DataSetComponent`
+Autores | `<nome dos membros que criaram o componente>`
+Objetivo | `<objetivo do componente>`
+Interface | `<interface em Java do componente>`
+~~~
+public interface ITableProducer {
+  String[] requestAttributes();
+  String[][] requestInstances();
+}
+public interface IDataSource {
+  public String getDataSource();
+  public void setDataSource(String dataSource);
+}
+public interface IDataSet extends ITableProducer, IDataSource {
+}
+~~~
+
+## Detalhamento das Interfaces
+
+### Interface `<nome da interface>`
+`<papel da interface>`.
+
+Método | Objetivo
+-------| --------
+`<id do método em Java>` | `<objetivo do método e descrição dos parâmetros>`
 
 # Componente `<Nome do Componente>`
 

@@ -56,20 +56,20 @@ Método | Objetivo
 -------| --------
 getHealth() | Retorna a vida do inimigo.
 decreaseHealth(int) | Decresce a vida do inimigo pelo valor recebido.
-move() | Move o inimigo em direção ao jogador
+move() | Move o inimigo em direção ao jogador.
 
 ## Interface IPlayer
-Interface geral para todos os inimigos.
+Interface do jogador.
 
 Método | Objetivo
 -------| --------
 getHealth() | Retorna a vida do jogador.
 decreaseHealth(int) | Decresce a vida do jogador pelo valor recebido.
 move(int) | Move o jogador na direção especificada.
-attack(int) | Ataca os inimigos na direção especificada
+attack(int) | Ataca os inimigos na direção especificada.
 
 ## Interface IBoard
-Interface geral para todos os inimigos.
+Interface do campo.
 
 Método | Objetivo
 -------| --------

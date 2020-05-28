@@ -17,18 +17,6 @@ Este é o diagrama compondo componentes bases para o jogo:
 
 ![Diagrama de componentes Enemy/Player](EnemyPlayerComp.png)
 
-## Exemplo 2
-
-Este é um diagrama inicial do projeto :
-
-![]()
-
-## Exemplo 3
-
-Este é outro diagrama de um projeto :
-
-![]()
-
 # Componente EnemyX
 
 ![Componente EnemyX](EnemyXComp.png)
@@ -37,35 +25,7 @@ Este é outro diagrama de um projeto :
 
 Interfaces associadas a esse componente:
 
-![Diagrama Interfaces](diagrama-interfaces.png)
-
-Campo | Valor
------ | -----
-Classe | `<caminho completo da classe com pacotes>` <br> Exemplo: `pt.c08componentes.s20catalog.s10ds.DataSetComponent`
-Autores | `<nome dos membros que criaram o componente>`
-Objetivo | `<objetivo do componente>`
-Interface | `<interface em Java do componente>`
-~~~
-public interface ITableProducer {
-  String[] requestAttributes();
-  String[][] requestInstances();
-}
-public interface IDataSource {
-  public String getDataSource();
-  public void setDataSource(String dataSource);
-}
-public interface IDataSet extends ITableProducer, IDataSource {
-}
-~~~
-
-## Detalhamento das Interfaces
-
-### Interface `<nome da interface>`
-`<papel da interface>`.
-
-Método | Objetivo
--------| --------
-`<id do método em Java>` | `<objetivo do método e descrição dos parâmetros>`
+![Interfaces EnemyX](EnemyInt.png)
 
 # Componente Player
 
@@ -77,34 +37,6 @@ Interfaces associadas a esse componente:
 
 ![Diagrama Interfaces](diagrama-interfaces.png)
 
-Campo | Valor
------ | -----
-Classe | `<caminho completo da classe com pacotes>` <br> Exemplo: `pt.c08componentes.s20catalog.s10ds.DataSetComponent`
-Autores | `<nome dos membros que criaram o componente>`
-Objetivo | `<objetivo do componente>`
-Interface | `<interface em Java do componente>`
-~~~
-public interface ITableProducer {
-  String[] requestAttributes();
-  String[][] requestInstances();
-}
-public interface IDataSource {
-  public String getDataSource();
-  public void setDataSource(String dataSource);
-}
-public interface IDataSet extends ITableProducer, IDataSource {
-}
-~~~
-
-## Detalhamento das Interfaces
-
-### Interface `<nome da interface>`
-`<papel da interface>`.
-
-Método | Objetivo
--------| --------
-`<id do método em Java>` | `<objetivo do método e descrição dos parâmetros>`
-
 # Componente Board
 
 ![Board](BoardComp.png)
@@ -115,30 +47,13 @@ Interfaces associadas a esse componente:
 
 ![Diagrama Interfaces](diagrama-interfaces.png)
 
-Campo | Valor
------ | -----
-Classe | `<caminho completo da classe com pacotes>` <br> Exemplo: `pt.c08componentes.s20catalog.s10ds.DataSetComponent`
-Autores | `<nome dos membros que criaram o componente>`
-Objetivo | `<objetivo do componente>`
-Interface | `<interface em Java do componente>`
-~~~
-public interface ITableProducer {
-  String[] requestAttributes();
-  String[][] requestInstances();
-}
-public interface IDataSource {
-  public String getDataSource();
-  public void setDataSource(String dataSource);
-}
-public interface IDataSet extends ITableProducer, IDataSource {
-}
-~~~
+# Detalhamento das Interfaces
 
-## Detalhamento das Interfaces
-
-### Interface `<nome da interface>`
-`<papel da interface>`.
+## Interface IEnemy
+Interface geral para todos os inimigos.
 
 Método | Objetivo
 -------| --------
-`<id do método em Java>` | `<objetivo do método e descrição dos parâmetros>`
+getHealth() | Retorna a vida do inimigo.
+decreaseHealth(int) | Decresce a vida do inimigo pelo valor recebido.
+move() | Move o inimigo em direção ao jogador

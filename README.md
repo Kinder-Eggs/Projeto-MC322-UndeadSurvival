@@ -6,8 +6,10 @@
 # Descrição Resumida do Projeto
 Undead Survival é um jogo celular de sobrevivência e estratégia baseado em turnos onde o jogador deve tentar permanecer vivo pelo maior número de turnos possível contra uma horda interminável de mortos vivos.
 
-# Vídeo do Projeto
+# Vídeo e Slides do Projeto
 [Breve video explicativo do projeto](https://drive.google.com/open?id=14vn7SfmNX47Of_C4Yxt0i782d_3f-4OM)
+
+[Slides referentes ao vídeo](https://drive.google.com/open?id=1IdngQ_egM3FmIH6DUdBX8-OqHsMU-bQJ)
 
 # Diagrama Geral de Componentes
 

@@ -22,7 +22,7 @@ To be Added
 
 Este é o diagrama compondo componentes bases para o jogo:
 
-![Diagrama de componentes Enemy/Player](EnemyPlayerCompFinished.png)
+![Diagrama de componentes Enemy/Player](EnemyPlayerCompF.png)
 
 ## Diagrama Exceptions
 
@@ -42,7 +42,7 @@ Interfaces associadas a esse componente:
 
 # Componente Board
 
-![Board](BoardCompFinished.png)
+![Board](BoardCompF.png)
 
 ## Interfaces
 

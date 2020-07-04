@@ -42,7 +42,7 @@ No geral, eu consideraria o projeto como um sucesso. Mesmo que não seja o jogo 
 
 Para possíveis melhorias no projeto teria side de grande agrado a capacidade de introduzir uma trilha sonora ao jogo (incluindo música e efeitos sonoros) e animações de movimentação e ataque às entidades.
 
-Para um próximo projeto seria interessante realizá-lo ainda mais modularizado, reduzindo o tamanho das classes maiores como Window que começou a se tornar mais problemática de ser modificada mais ao final do projeto.
+Para um próximo projeto seria interessante realizá-lo ainda mais modularizado, reduzindo o tamanho das classes maiores, como Window, que começou a se tornar mais problemática de ser modificada mais ao final do projeto.
 
 # Diagrama Geral de Componentes
 

@@ -18,6 +18,27 @@ Undead Survival é um jogo celular de sobrevivência e estratégia baseado em tu
 
 To be Added
 
+## Relatório de Evolução
+
+Durante a execução do projeto foi adotado uma posição dinâmica quanto a mundanças necessárias/melhorias para o projeto. Desta forma, durante sua execução, muitas vezes foram necessários mundanças de rumo.
+Uma das principais mudanças de rumo foi a de reiniciar o jogo sem reabri-lo, visto que o jogo funciona como um minigame, curto, dinâmico e para ser repetido diversas vezes. Desta forma, reabri-lo a cada partida era um grande problema.
+Porém, a tarefa de conseguir reiniciar o jogo através do pressionamento de um botão vindo do usuário foi uma das maiores dificuldades encontradas para o término do projeto, visto que, da forma que a classe Window era construída antes de tal mudança, era muito difícil qualquer tipo de reinicialização.
+Isso requeriu, portanto, grandes melhorias na classe e uma série de aprendizados que demonstraram o por que da importância da modularização, prática muito comum dentro da programação orientada a objetos.
+
+# Destaques de Código
+
+To be Added
+
+# Destaques do Pattern
+
+To be Added
+
+# Conclusões e Trabalhos Futuros
+
+No geral, eu consideraria o projeto como um sucesso. Mesmo que não seja o jogo mais complexo ou divertido, muitas lições, tanto quanto pela parte de programação quanto a de design, foram adquiridas durante tal. A fácil evolução que foi a melhoria do projeto serviu como ótima demonstração do por que a programação orientada a objetos é tão popular para grandes projetos, tornando simples modificações e melhorias em componentes sem necessitar de grandes preocupações quanto aos demais componentes associados a tal.
+Para possíveis melhorias no projeto teria side de grande agrado a capacidade de introduzir uma trilha sonora ao jogo (incluindo música e efeitos sonoros) e animações de movimentação e ataque às entidades.
+Para um próximo projeto seria interessante realizá-lo ainda mais modularizado, reduzindo o tamanho das classes maiores como Window que começou a se tornar mais problemática de ser modificada mais ao final do projeto.
+
 # Diagrama Geral de Componentes
 
 Este é o diagrama compondo componentes bases para o jogo:
@@ -78,6 +99,6 @@ Método | Objetivo
 -------| --------
 getTableSize() | Retorna o tamanho do campo.
 getTurns() | Retorna quantos turnos se passaram no jogo.
-getEntities() | Retorna um vetor bidimensional de entidades em suas respectivas posições no campo.
+getEntities() | Retorna uma matriz bidimensional de entidades em suas respectivas posições no campo.
 movePlayer(char direction) | Movimenta o jogador na direção especificada e procede com os turnos dos oponentes; Retorna 0 caso o jogador morra.
 playerAttack(char direction) | Remove a unidade na direção especificada em relação ao jogador e procede com os turnos dos oponentes; Retorna 0 caso o jogador morra.

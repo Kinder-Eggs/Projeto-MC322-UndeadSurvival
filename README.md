@@ -7,37 +7,38 @@
 Undead Survival é um jogo celular de sobrevivência e estratégia baseado em turnos onde o jogador deve tentar permanecer vivo pelo maior número de turnos possível contra uma horda interminável de mortos vivos.
 
 # Vídeo e Slides do Projeto
-[Breve video explicativo do projeto](https://drive.google.com/open?id=14vn7SfmNX47Of_C4Yxt0i782d_3f-4OM)
+
+## Vídeo da prévia
+
+[Breve video com as ideias iniciais do projeto](https://drive.google.com/open?id=14vn7SfmNX47Of_C4Yxt0i782d_3f-4OM)
 
 [Slides referentes ao vídeo](https://drive.google.com/open?id=1IdngQ_egM3FmIH6DUdBX8-OqHsMU-bQJ)
 
-# Diagrama Geral de Componentes
+## Vídeo do jogo
 
-## Componente Enemy/Player - Board
+To be Added
+
+# Diagrama Geral de Componentes
 
 Este é o diagrama compondo componentes bases para o jogo:
 
 ![Diagrama de componentes Enemy/Player](EnemyPlayerComp.png)
 
-# Componente EnemyX
+## Diagrama Exceptions
 
-![Componente EnemyX](EnemyXComp.png)
+Este é o diagrama compondo as classes de exceções existentes no jogo:
 
-## Interfaces
+![Diagrama de componentes Exceptions](ExceptionsComp.png)
 
-Interfaces associadas a esse componente:
+# Componente Enemy/Player
 
-![Interfaces EnemyX](EnemyInt.png)
-
-# Componente Player
-
-![Player](PlayerComp.png)
+![Componente Enemy/Player](EntityComp.png)
 
 ## Interfaces
 
 Interfaces associadas a esse componente:
 
-![Interfaces Player](PlayerInt.png)
+![Interfaces Entity](EntityInt.png)
 
 # Componente Board
 
@@ -51,33 +52,24 @@ Interfaces associadas a esse componente:
 
 # Detalhamento das Interfaces
 
-## Interface IEnemy
+## Interface IEntity
 Interface geral para todos os inimigos.
 
 Método | Objetivo
 -------| --------
-getHealth() | Retorna a vida do inimigo.
-decreaseHealth(int) | Decresce a vida do inimigo pelo valor recebido.
-move() | Move o inimigo em direção ao jogador.
-
-## Interface IPlayer
-Interface do jogador.
-
-Método | Objetivo
--------| --------
-getHealth() | Retorna a vida do jogador.
-decreaseHealth(int) | Decresce a vida do jogador pelo valor recebido.
-move(int) | Move o jogador na direção especificada.
-attack(int) | Ataca os inimigos na direção especificada.
+getCoordX() | Retorna a coordenada em X da entidade.
+getCoordY() | Retorna a coordenada em Y da entidade.
+incrementCoordX(int inc) | Incrementa a coordenada X da entidade em inc.
+incrementCoordY(int inc) | Incrementa a coordenada Y da entidade em inc.
+getType() | Retorna uma string contendo o tipo de entidade.
 
 ## Interface IBoard
 Interface do campo.
 
 Método | Objetivo
 -------| --------
-moveEnemies() | Aciona a função move de todos os inimigos em campo.
-movePlayer(int) | Modifica a posição do jogador.
-spawnEnemies() | Cria mais monstros em campo.
-receiveAttack(int) | Verifica o ataque do jogador e decresce a vida dos inimigos quando necessário.
-printBoard() | Imprime o campo na tela.
-setBoard(int) | Arruma o campo de tamanho int para a posição inicial.
+getTableSize() | Retorna o tamanho do campo.
+getTurns() | Retorna quantos turnos se passaram no jogo.
+getEntities() | Retorna um vetor bidimensional de entidades em suas respectivas posições no campo.
+movePlayer(char direction) | Movimenta o jogador na direção especificada e procede com os turnos dos oponentes; Retorna 0 caso o jogador morra.
+playerAttack(char direction) | Remove a unidade na direção especificada em relação ao jogador e procede com os turnos dos oponentes; Retorna 0 caso o jogador morra.

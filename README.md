@@ -50,6 +50,14 @@ Interfaces associadas a esse componente:
 
 ![Interfaces Board](BoardIntFinished.png)
 
+# Componente Window
+
+![Componente Window](WindowComp.png)
+
+## Classe
+
+![Classe Window](WindowClass.png)
+
 # Detalhamento das Interfaces
 
 ## Interface IEntity

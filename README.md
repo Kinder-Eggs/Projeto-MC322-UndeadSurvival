@@ -145,7 +145,7 @@ Este é o diagrama compondo as classes de exceções existentes no jogo:
 
 ## Interfaces
 
-Interfaces associadas a esse componente:
+Interfaces associadas aos componentes Enemy e Player:
 
 ![Interfaces Entity](EntityInt.png)
 
@@ -155,7 +155,7 @@ Interfaces associadas a esse componente:
 
 ## Interfaces
 
-Interfaces associadas a esse componente:
+Interfaces associadas ao componente Board:
 
 ![Interfaces Board](BoardIntFinished.png)
 
@@ -170,7 +170,7 @@ Interfaces associadas a esse componente:
 # Detalhamento das Interfaces
 
 ## Interface IEntity
-Interface geral para todos os inimigos.
+Interface implementada por todas as entidades.
 
 Método | Objetivo
 -------| --------
@@ -181,7 +181,7 @@ incrementCoordY(int inc) | Incrementa a coordenada Y da entidade em inc.
 getType() | Retorna uma string contendo o tipo de entidade.
 
 ## Interface IBoard
-Interface do campo.
+Interface implementada pelo campo.
 
 Método | Objetivo
 -------| --------

@@ -190,3 +190,24 @@ getTurns() | Retorna quantos turnos se passaram no jogo.
 getEntities() | Retorna uma matriz bidimensional de entidades em suas respectivas posições no campo.
 movePlayer(char direction) | Movimenta o jogador na direção especificada e procede com os turnos dos oponentes; Retorna 0 caso o jogador morra.
 playerAttack(char direction) | Remove a unidade na direção especificada em relação ao jogador e procede com os turnos dos oponentes; Retorna 0 caso o jogador morra.
+
+# Plano de Exceções
+
+## Diagrama de Hierarquia de Exceções
+
+[Diagrama de excecoes](ExceptionsDiagram.png)
+
+## Descrição das Classes de Exceções
+
+Classe | Descrição
+-------| ---------
+UselessAttack | Engloba todas as exceções relacionadas aos ataques.
+EmptyUpperGrid | Indica que não há inimigo na casa acima do jogador.
+EmptyDownGrid | Indica que não há inimigo na casa abaixo do jogador.
+EmptyLeftGrid | Indica que não há inimigo na casa à esquerda do jogador.
+EmptyRightGrid | Indica que não há inimigo na casa à direita do jogador.
+MovementOutOfBounds | Engloba todas as exceções relacionadas a movimentação.
+NoUpperGrid | Indica que não é possível fazer a movimentação para cima.
+NoDownGrid | Indica que não é possível fazer a movimentação para baixo.
+NoLeftGrid | Indica que não é possível fazer a movimentação para à esquerda.
+NoRightGrid | Indica que não é possível fazer a movimentação para à direita.

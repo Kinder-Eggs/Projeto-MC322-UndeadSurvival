@@ -30,11 +30,92 @@ Isso requeriu, portanto, grandes melhorias na classe e uma série de aprendizado
 
 # Destaques de Código
 
-To be Added
+## Tutorial com a espera do pressionamento de um botão:
+
+~~~java
+    private void loadTutorial() {
+        ...
+        while(mode == 0) {  // Waits for mode to change (Keyboard input) to finish the task and load the game
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
+    ...
+    
+    public void keyTyped(KeyEvent keyEvent) {
+        if(mode == 0) {  // While in tutorial mode, any key changes to game mode
+            mode = 1;
+        }
+        ...
+    }
+~~~
+
+> <Destaque demonstrando como foi criado a espera até o pressionamento de um botão sem consumir 100% do CPU (por isso a necessidade do "Thread.Sleep(...)".>
+
+## Aleatoriedade para aparição dos inimigos
+
+~~~java
+    private void spawnEnemies() {
+        if(nEnemies > 5) // If there is already 6 or more enemies on the board, doesnt spawn more
+            return;
+        Random random = new Random();
+        int randomInt = random.nextInt(turns*5);
+        if(randomInt >= 100) {  // Spawns 4 enemies, can only happen from turn 20 onwards
+            ...
+        } else if (randomInt >= 75) {  // Spawns 3 enemies, can only happen from turn 15 onwards
+            ...
+        // Spawns 2 enemies, can only happen on turn 8 onwards. Always happen when there are no enemies left on the board
+        } else if (randomInt >= 40 || nEnemies == 0) {
+            ...
+        } else if (randomInt >= 15) {  // Spawns 1 enemy on the board, can only happen from turn 3 onwards
+            ...
+        }
+    }
+~~~
+
+> <Destaque demonstrando como foi criado a aparição aleatória de inimigos que aumenta a cada turno que se passa. Além disso, dentro de cada if nas reticências, é novamente utilizado a função random para escolher um canto de forma aleatória também.>
+
+## Atualização de paineis do jogo
+
+~~~java
+private void updatePanels() {
+        gridPanel.removeAll();  // Deletes all images loaded on grids to rebuild the board
+
+        for(int i = 0; i < board.getTableSize(); i++) {
+            for(int j = 0; j < board.getTableSize(); j++) {
+                imagePanels[i][j] = new JPanel();
+                imagePanels[i][j].setLayout(new BorderLayout());
+                IEntity[][] entities = board.getEntities();
+                if(entities[i][j] != null) {
+                    if (entities[i][j].getType() == "Player") {
+                        imagePanels[i][j].add(new JLabel(new ImageIcon(getClass().getResource("/Character.jpg"))), BorderLayout.CENTER);
+                    } else if (entities[i][j].getType() == "Enemy") {
+                        imagePanels[i][j].add(new JLabel(new ImageIcon(getClass().getResource("/Enemy.jpg"))), BorderLayout.CENTER);
+                    }
+                }else {
+                        imagePanels[i][j].add(new JLabel(new ImageIcon(getClass().getResource("/Border.jpg"))), BorderLayout.CENTER);
+                }
+                gridPanel.add(imagePanels[i][j]);
+            }
+        }
+        mainPanel.removeAll();  // Removes existing panels from main panel to add the updated ones
+        mainPanel.add(gridPanel, BorderLayout.CENTER);
+        JLabel roundsTextPanel = new JLabel("Round: " + board.getTurns());
+        roundsTextPanel.setFont(new Font("Verdana", Font.BOLD,50));
+        mainPanel.add(roundsTextPanel, BorderLayout.SOUTH);
+        SwingUtilities.updateComponentTreeUI(this);
+    }
+~~~
+
+> <Destaque do código onde atualiza-se todos os paineis do jogo sem ter overlap das figuras anteriores, incluindo o texto de quantos turnos se passaram na parte inferior da tela.>
 
 # Destaques do Pattern
 
-Foi adotado como patter o Model-View-Controller onde Board funciona como model, a implementacao de KeyListener dentro de Window serve como controller, e o restante de Window como View. 
+Foi adotado como pattern o Model-View-Controller onde Board funciona como model, a implementacao de KeyListener dentro de Window serve como controller, e o restante de Window como View. 
 
 Isso ocorre pois, dentro de Board mantém-se salvos várias variáveis importantes para o jogo como a posição de todas as entidades e o número de turnos assim como as funções que alteram os mesmos, sendo desta forma o Model do projeto. Dento da implementação de KeyListener em Window são chamadas todas as funções dentro de Board que por sua vez alteram todo o campo, agindo portanto como o Controller. E além disso, Window, com suas funções para ler o campo dentro de Board e exibí-lo na tela no formato de grids, age como o View.
 

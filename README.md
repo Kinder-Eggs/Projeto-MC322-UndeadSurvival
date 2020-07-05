@@ -16,7 +16,7 @@ Undead Survival é um jogo celular de sobrevivência e estratégia baseado em tu
 
 ## Vídeo do jogo
 
-To be Added
+[Vídeo demonstrando o jogo](https://drive.google.com/file/d/1mIIrYCA06YPccaW-oJHd89ocLE6z1wA4/view?usp=sharing)
 
 ## Relatório de Evolução
 

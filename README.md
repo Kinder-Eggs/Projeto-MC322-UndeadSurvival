@@ -195,7 +195,7 @@ playerAttack(char direction) | Remove a unidade na direção especificada em rel
 
 ## Diagrama de Hierarquia de Exceções
 
-[Diagrama de excecoes](ExceptionsDiagram.png)
+![Diagrama de excecoes](ExceptionsDiagram.png)
 
 ## Descrição das Classes de Exceções
 

@@ -34,7 +34,9 @@ To be Added
 
 # Destaques do Pattern
 
-To be Added
+Foi adotado como patter o Model-View-Controller onde Board funciona como model, a implementacao de KeyListener dentro de Window serve como controller, e o restante de Window como View. 
+
+Isso ocorre pois, dentro de Board mantém-se salvos várias variáveis importantes para o jogo como a posição de todas as entidades e o número de turnos assim como as funções que alteram os mesmos, sendo desta forma o Model do projeto. Dento da implementação de KeyListener em Window são chamadas todas as funções dentro de Board que por sua vez alteram todo o campo, agindo portanto como o Controller. E além disso, Window, com suas funções para ler o campo dentro de Board e exibí-lo na tela no formato de grids, age como o View.
 
 # Conclusões e Trabalhos Futuros
 
